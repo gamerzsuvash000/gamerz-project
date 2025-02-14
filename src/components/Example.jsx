@@ -28,36 +28,39 @@ export default function Examples () {
 
     return (
     <Section title="Examples" id="examples">
-      <tabs Button={
-        <>
-                    <TabButton
-                      isSelected={selectedTopic === "Techno"}
-                      onClick={() => handleSelect("Techno")}
-                    >
-                      Techno gamerz
-                    </TabButton>
-                    <TabButton
-                      isSelected={selectedTopic === "Total"}
-                      onClick={() => handleSelect("Total")}
-                    >
-                      Total gaming
-                    </TabButton>
-                    <TabButton
-                      isSelected={selectedTopic === "live"}
-                      onClick={() => handleSelect("live")}
-                    >
-                      live insane
-                    </TabButton>
-                    <TabButton
-                      isSelected={selectedTopic === "suvash"}
-                      onClick={() => handleSelect("suvash")}
-                    >
-                      suvash gaming
-                    </TabButton>
-        </>
-        }>
+      <Tabs
+        ButtonsContainer="menu"
+        Button={
+          <>
+            <TabButton
+              isSelected={selectedTopic === "Techno"}
+              onClick={() => handleSelect("Techno")}
+            >
+              Techno gamerz
+            </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "Total"}
+              onClick={() => handleSelect("Total")}
+            >
+              Total gaming
+            </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "live"}
+              onClick={() => handleSelect("live")}
+            >
+              live insane
+            </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "suvash"}
+              onClick={() => handleSelect("suvash")}
+            >
+              suvash gaming
+            </TabButton>
+          </>
+        }
+      >
         {tabContent}
-        </tabs>
-   </Section>
+      </Tabs>
+    </Section>
     );
 }
